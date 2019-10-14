@@ -106,8 +106,7 @@ public class Person {
      * this is a constructor of person class.
      */
     public Person() {
-        // TODO - implement Person.Person
-        throw new UnsupportedOperationException();
+       
     }
 
     /**
@@ -116,13 +115,15 @@ public class Person {
      * @param address
      */
     public void person(String name, String address) {
-        // TODO - implement Person.person
-        throw new UnsupportedOperationException();
+        
     }
 
-    public String toString() {
-        // TODO - implement Person.toString
-        throw new UnsupportedOperationException();
-    }
+	@Override
+	public String toString() {
+		return "name=" + name + ", address=" + address + ", state=" + state + ", zip=" + zip + ", phone="
+				+ phone + ", sSN=" + sSN + ", city=" + city + ", cashier=" + cashier.getNumber() + "\n";
+	}
+
+    
 
 }

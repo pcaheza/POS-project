@@ -64,8 +64,7 @@ public class Cashier {
      * @param password
      */
     public Cashier(String number, Person person, String password) {
-        // TODO - implement Cashier.Cashier
-        throw new UnsupportedOperationException();
+       
     }
 
     /**
@@ -95,14 +94,16 @@ public class Cashier {
         throw new UnsupportedOperationException();
     }
 
-    public String toString() {
-        // TODO - implement Cashier.toString
-        throw new UnsupportedOperationException();
+    
+    public Cashier() {
+       
     }
 
-    public Cashier() {
-        // TODO - implement Cashier.Cashier
-        throw new UnsupportedOperationException();
-    }
+	@Override
+	public String toString() {
+		return "[number=" + number + ", person=" + person + "]\n";//TODO can we show few details of the person
+	}
+    
+    
 
 }

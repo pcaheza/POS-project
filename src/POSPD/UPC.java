@@ -40,7 +40,7 @@ public class UPC {
   
     @Override
 	public String toString() {
-		return "UPC [upc=" + upc + ", item=" + item + "]";
+		return " \n upc=" + upc + ", item=" + item + "\n";
 	}
 
 	/**

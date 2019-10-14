@@ -64,7 +64,7 @@ public class TaxCategory {
 	public BigDecimal getTaxRateForDate(LocalDate date) {
 		
 		for (TaxRate txRate : taxRates) {
-			if (date.isEqual(txRate.getEffectiveDate())) {
+			if (date.equals(txRate.getEffectiveDate())) {
 				return txRate.getTaxRate();  //this is the rate i.e.10%
 			}
 		}
@@ -76,7 +76,7 @@ public class TaxCategory {
 
 	@Override
 	public String toString() {
-		return "TaxCategory [category=" + category + ", taxRates=" + taxRates + "]";
+		return "\n category=" + category + "\n, taxRates=" + taxRates +"\n";
 	}
 
 	/**

@@ -1,6 +1,7 @@
 package POSPD;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 /**
  * SaleLineItem represent each item and its details like serial number of each items.
@@ -51,37 +52,36 @@ public class SaleLineItem {
      * @param quantity
      */
     public SaleLineItem(Sale sale, Item item, String quantity) {
-        // TODO - implement SaleLineItem.SaleLineItem
-        throw new UnsupportedOperationException();
+        this.sale=sale;
+        this.item=item;
+        this.quantity=Integer.valueOf(quantity);
     }
 
     /**
      * this function will calculate the subtotal of the sold items.
      */
     public BigDecimal calcSubTotal() {
-        // TODO - implement SaleLineItem.calcSubTotal
-        throw new UnsupportedOperationException();
+       return item.getPriceForDate(LocalDate.now()).getPrice().multiply(
+    		   new BigDecimal(this.quantity));
     }
 
     /**
      * this function will calculate tax of the sold item.
      */
     public BigDecimal calTax() {
-        // TODO - implement SaleLineItem.calTax
-        throw new UnsupportedOperationException();
-    }
-
-    public String toString() {
-        // TODO - implement SaleLineItem.toString
-        throw new UnsupportedOperationException();
+    		return item.getTaxRateForDate(LocalDate.now()).multiply(new BigDecimal(this.quantity));
     }
 
     /**
      * constructor
      */
     public SaleLineItem() {
-        // TODO - implement SaleLineItem.SaleLineItem
-        throw new UnsupportedOperationException();
+    
     }
+
+	@Override
+	public String toString() {
+		return "SaleLineItem [quantity=" + quantity + ", item=" + item  +"]";
+	}
 
 }

@@ -47,17 +47,18 @@ public class CashDrawer {
         throw new UnsupportedOperationException();
     }
 
-    public String toString() {
-        // TODO - implement CashDrawer.toString
-        throw new UnsupportedOperationException();
-    }
-
     /**
      * this is default constructor.
      */
     public CashDrawer() {
-        // TODO - implement CashDrawer.CashDrawer
-        throw new UnsupportedOperationException();
+       
     }
+
+	@Override
+	public String toString() {
+		return " cashAmount=" + cashAmount + ", position=" + position + "\n";
+	}
+    
+    
 
 }

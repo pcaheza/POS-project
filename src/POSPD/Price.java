@@ -6,7 +6,7 @@ import java.time.LocalDate;
 /**
  * price refer to the cost of each item located in store.
  */
-public abstract class Price {
+public abstract class Price implements Comparable<Price>{
 
     /**
      * this describe the price of the item

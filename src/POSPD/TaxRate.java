@@ -1,12 +1,13 @@
 package POSPD;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 
 /**
  * Tax Rate is the amount to charge for sales tax for an item. Each item is in one tax category and there is an current effective date base on the current date. The system shall provide a way to add, update and delete Tax Rates.
  */
-public class TaxRate {
+public class TaxRate implements Comparable<TaxRate>{
 
     /**
      * the ratio at which a customer is taxed.
@@ -73,7 +74,7 @@ public class TaxRate {
 
     @Override
 	public String toString() {
-		return "TaxRate [taxRate=" + taxRate + ", effectiveDate=" + effectiveDate + "]";
+		return "\n taxRate=" + taxRate.setScale(2, RoundingMode.CEILING) + ", effectiveDate=" + effectiveDate + "\n";
 	}
 
 	/**

@@ -20,7 +20,7 @@ public class Session {
     /**
      * Sale is a transaction between a customer and the store the represents the items purchased by the customer.
      */
-    private ArrayList<Sale> sales;
+    private ArrayList<Sale> sales=new ArrayList<>();
     /**
      * 
      * The Cashiers make the sale to the customers. The system shall provide a way to add, update and delete Cashiers
@@ -77,8 +77,8 @@ public class Session {
      * @param register
      */
     public Session(Cashier cashier, Register register) {
-        // TODO - implement Session.Session
-        throw new UnsupportedOperationException();
+		this.cashier=cashier;
+		this.register=register;
     }
 
     /**
@@ -86,7 +86,7 @@ public class Session {
      * @param sale
      */
     public void addSale(Sale sale) {
-        // TODO - implement Session.addSale
+
         sales.add(sale);
     }
 
@@ -108,14 +108,14 @@ public class Session {
         throw new UnsupportedOperationException();
     }
 
-    public String toString() {
-        // TODO - implement Session.toString
-        throw new UnsupportedOperationException();
+    public Session() {
+        
     }
 
-    public Session() {
-        // TODO - implement Session.Session
-        throw new UnsupportedOperationException();
-    }
+	@Override
+	public String toString() {
+		return "Session [StartDateTime=" + StartDateTime + ", endDateTime=" + endDateTime + ", sales=" + sales
+				+ ", cashier=" + cashier + ", register=" + register + "]";
+	}
 
 }
